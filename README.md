@@ -53,7 +53,7 @@ Route::get('/hello-world', function () {
 ```
 use VendorName\HelloWorld\Facades\HelloWorld;
 
-echo HelloWorld::sayHello();
+echo HelloWorld::sayHello('amiiiiink');
 // Output: Hello World
 ```
 
