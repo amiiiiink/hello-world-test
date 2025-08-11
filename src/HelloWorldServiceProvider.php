@@ -21,8 +21,8 @@ class HelloWorldServiceProvider extends ServiceProvider
         // load views from package
         $this->loadViewsFrom(__DIR__ . '/../resources/views', 'helloworld');
 
-        if (file_exists(__DIR__.'/../helpers.php')) {
-            require_once __DIR__.'/../helpers.php';
+        if (file_exists(__DIR__.'/helpers.php')) {
+            require_once __DIR__.'/helpers.php';
         }
 
         $this->publishes([
