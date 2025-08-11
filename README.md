@@ -60,8 +60,13 @@ echo HelloWorld::sayHello('amiiiiink');
 ### Helper Function
 
 ```
-echo hello_world();
+ echo sayHello('amiiiiink');
 // Output: Hello World
+```
+
+### to find out helpers
+```
+php artisan package:generate-helpers
 ```
 
 
