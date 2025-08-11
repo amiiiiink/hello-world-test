@@ -14,6 +14,11 @@
       "Amiiiiink\\HelloWorld\\": "src/"
     }
   },
+  "autoload-dev": {
+    "files": [
+      "src/helpers_stub.php"
+    ]
+  },
   "extra": {
     "laravel": {
       "providers": [
@@ -29,10 +34,7 @@
     "illuminate/support": "^9|^10|^11|^12"
   },
   "require-dev": {
-    "phpunit/phpunit": "^10.0",
-    "files": [
-      "src/helpers_stub.php"
-    ]
+    "phpunit/phpunit": "^10.0"
   },
   "minimum-stability": "dev",
   "prefer-stable": true
