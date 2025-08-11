@@ -29,7 +29,10 @@
     "illuminate/support": "^9|^10|^11|^12"
   },
   "require-dev": {
-    "phpunit/phpunit": "^10.0"
+    "phpunit/phpunit": "^10.0",
+    "files": [
+      "src/helpers_stub.php"
+    ]
   },
   "minimum-stability": "dev",
   "prefer-stable": true

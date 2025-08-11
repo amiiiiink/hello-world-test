@@ -8,6 +8,13 @@ class HelloWorldServiceProvider extends ServiceProvider
 {
     public function register()
     {
+
+        if ($this->app->runningInConsole()) {
+            $this->commands([
+                \Amiiiiink\HelloWorld\Console\GenerateHelpersCommand::class,
+            ]);
+        }
+
         $this->mergeConfigFrom(__DIR__ . '/../config/helloworld.php', 'helloworld');
 
         $this->app->singleton('helloworld', function () {
