@@ -21,6 +21,10 @@ class HelloWorldServiceProvider extends ServiceProvider
         // load views from package
         $this->loadViewsFrom(__DIR__ . '/../resources/views', 'helloworld');
 
+        if (file_exists(__DIR__.'/../helpers.php')) {
+            require_once __DIR__.'/../helpers.php';
+        }
+
         $this->publishes([
             __DIR__ . '/../config/helloworld.php' => config_path('helloworld.php'),
         ], 'hello-world-config');
@@ -41,6 +45,8 @@ class HelloWorldServiceProvider extends ServiceProvider
             __DIR__ . '/../resources/views' => resource_path('views/vendor/helloworld'),
             __DIR__ . '/../resources/css/helloworld.tailwind.css' => resource_path('vendor/helloworld/helloworld.css'),
         ], 'helloworld');
+
+
 
 
     }
