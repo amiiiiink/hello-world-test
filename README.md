@@ -18,7 +18,16 @@ composer require amiiiiink/hello-world
 
 ```
 php artisan vendor:publish --tag=hello-world-config
+ php artisan vendor:publish --tag="helloworld"
 ```
+
+
+add @import "../vendor/helloworld/helloworld.css";
+into resources/css/app.css
+
+then npm install 
+
+then npm run build
 
 🚀 Usage
 ```

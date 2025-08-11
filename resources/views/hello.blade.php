@@ -1,6 +1,6 @@
 {{-- resources/views/hello.blade.php --}}
 @props(['title' => 'Hello World', 'subtitle' => 'Welcome to modern CSS demo'])
-
+<head> @vite(['resources/css/app.css'])</head>
 <section class="hw-root" aria-labelledby="hw-title">
     <div class="hw-card">
         <header class="hw-header">
