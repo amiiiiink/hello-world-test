@@ -19,6 +19,6 @@ class HelloWorldServiceProvider extends ServiceProvider
     {
         $this->publishes([
             __DIR__ . '/../config/helloworld.php' => config_path('helloworld.php'),
-        ], 'config');
+        ], 'hello-world-config');
     }
 }
