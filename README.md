@@ -22,12 +22,32 @@ php artisan vendor:publish --tag=hello-world-config
 ```
 
 
-add @import "../vendor/helloworld/helloworld.css";
+add 
+```
+@import "../vendor/helloworld/helloworld.css";
+```
+
 into resources/css/app.css
 
-then npm install 
+then  
+```
+npm install
+```
 
-then npm run build
+then
+```
+npm run build
+```
+in web.php add below
+```
+Route::get('/hello-world', function () {
+    return view('helloworld::hello', [
+        'title' => 'سلام از پکیج',
+        'subtitle' => 'نسخهٔ جدید با Tailwind CSS'
+    ]);
+});
+```
+
 
 🚀 Usage
 ```
