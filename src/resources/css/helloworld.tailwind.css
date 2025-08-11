@@ -1,0 +1,57 @@
+/* resources/css/helloworld.tailwind.css */
+
+/* استفاده از @layer تا با Tailwind merge شود */
+@layer components {
+    .hw-root {
+        @apply font-sans p-4 text-[rgb(var(--hw-ink))] bg-[rgb(var(--hw-bg))] transition-colors;
+    }
+
+    .hw-card {
+        @apply max-w-[80ch] mx-auto rounded-xl shadow-md border p-[clamp(1rem,2vw,2rem)] transition-all;
+        container-type: inline-size;
+    }
+
+    .hw-title {
+        @apply text-[clamp(1.25rem,1.8vw,2rem)] font-bold mb-1;
+    }
+
+    .hw-subtitle {
+        @apply text-sm text-[rgb(var(--hw-ink)/0.7)] mb-3;
+    }
+
+    .hw-grid {
+        @apply grid gap-4 grid-cols-1;
+    }
+    @container (min-width: 600px) {
+        .hw-grid {
+            @apply grid-cols-2;
+        }
+    }
+    @container (min-width: 1000px) {
+        .hw-grid {
+            @apply grid-cols-4;
+        }
+    }
+
+    .hw-item {
+        @apply p-3 text-center font-semibold rounded-md bg-[color-mix(in_srgb,rgb(var(--hw-accent))_8%,rgb(var(--hw-bg)))];
+    }
+
+    .hw-btn {
+        @apply inline-block px-4 py-2 rounded-full font-semibold text-white bg-[rgb(var(--hw-accent))] hover:shadow-lg transition;
+    }
+}
+
+/* variables */
+:root {
+    --hw-bg: 255 255 255;
+    --hw-ink: 20 20 20;
+    --hw-accent: 59 130 246;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --hw-bg: 12 12 13;
+        --hw-ink: 230 230 230;
+    }
+}
